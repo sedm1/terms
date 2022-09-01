@@ -1,0 +1,127 @@
+$white: #FFFFFF
+$black: #292929
+$blue: #122E73
+$borderContainer: 1140px
+*
+    padding: 0
+    margin: 0
+    font-family: 'Inter', sans-serif
+    box-sizing: border-box
+img
+    width: 100%
+    height: auto
+    display: block
+.textcontainer  
+    max-width: $borderContainer
+    width: 100%
+    margin: 0 auto
+    border: 4px solid $blue
+    position: relative
+    margin-top: 80px
+    padding: 100px 40px
+.logo
+    position: absolute
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    top: 0px
+    width: 250px
+.text__block
+    display: flex 
+    justify-content: space-between
+.sections__link 
+    width: 303px
+    height: max-content
+    position: sticky 
+    top: 30px
+    border: 1px dashed #8FB9EF
+    border-radius: 18px
+    ul 
+        list-style: none 
+        display: flex 
+        flex-direction: column
+        li 
+            padding: 11px 19px
+            a 
+                color: #9F9F9F 
+                font-size: 16px
+                font-weight: 500
+                text-decoration: none 
+                transition: all 0.2s ease 
+                display: flex
+            &.active 
+                background: #EAF1FB
+                a
+                    color: $black
+            &:first-child
+                border-radius: 17px 17px 0px 0px
+            &:last-child
+                border-radius: 0px 0px 17px 17px
+.main__title
+    font-weight: 700
+    font-size: 40px
+    color: $black
+.section__text
+    margin-top: 50px
+    color: $black
+    &-title
+        font-weight: 700
+        font-size: 24px
+    &-item
+        margin-top: 15px
+        font-weight: 400
+        font-size: 16px
+        line-height: 25px
+        span
+            font-weight: 600
+            font-size: 16px
+            line-height: 25px
+
+.sections 
+    max-width: 697px
+    width: 100%
+.openMenu
+    display: none
+@media screen and ( max-width:  $borderContainer)
+    .main__title
+        font-size: 28px
+    .section__text-title
+        font-size: 20px
+    .section__text-item
+        font-size: 14px
+    .openMenu
+        display: block
+        width: 12px
+        background: none
+        border: 0 none
+        outline: 0 none
+        img
+            width: 100%
+    .textcontainer
+        border-left: 0px
+        border-right: 0px
+        padding: 30px 0px
+        margin-top: 50px
+        width: 98%
+    .text__block
+        flex-direction: column
+        align-items: center
+        margin-top: 100px
+    .sections__link
+        position: static
+        top: 0px
+        width: 100%
+        height: 42px
+        overflow: hidden
+        ul 
+            li 
+                display: flex
+                align-items: center
+                justify-content: space-between
+                a
+                    display: initial
+        &.openList
+            height: auto
+    .sections
+        max-width: 100%
+        margin-top: 40px
+    
